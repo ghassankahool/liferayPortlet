@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="net.gbcoder.gblib">
+	<author>GL</author>
+	<namespace>gb</namespace>
+
+	<entity name="Book" human-name="Book" table="Book"
+		local-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="bookId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="bookName" type="String"></column>
+        <column name="bookPricae" type="double"></column>
+        <column name="bookDate" type="Date"></column>
+        <column name="authorId" type="long"></column>
+	</entity>
+	<entity name="Author" local-service="true" human-name="Author"
+		table="Author" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="authorId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="authorName" type="String"></column>
+        <column name="authorGender" type="boolean"></column>
+	</entity>
+</service-builder>

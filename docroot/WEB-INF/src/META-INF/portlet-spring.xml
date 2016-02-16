@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="net.gbcoder.gblib.service.AuthorLocalService" class="net.gbcoder.gblib.service.impl.AuthorLocalServiceImpl" />
+	<bean id="net.gbcoder.gblib.service.AuthorService" class="net.gbcoder.gblib.service.impl.AuthorServiceImpl" />
+	<bean id="net.gbcoder.gblib.service.persistence.AuthorPersistence" class="net.gbcoder.gblib.service.persistence.AuthorPersistenceImpl" parent="basePersistence" />
+	<bean id="net.gbcoder.gblib.service.BookLocalService" class="net.gbcoder.gblib.service.impl.BookLocalServiceImpl" />
+	<bean id="net.gbcoder.gblib.service.BookService" class="net.gbcoder.gblib.service.impl.BookServiceImpl" />
+	<bean id="net.gbcoder.gblib.service.persistence.BookPersistence" class="net.gbcoder.gblib.service.persistence.BookPersistenceImpl" parent="basePersistence" />
+</beans>
